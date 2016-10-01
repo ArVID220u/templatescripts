@@ -2,12 +2,41 @@
 
 # create a new file, with the name as given as the first argument
 from sys import argv
-filename = argv[1]+".py"
-new_file = open(filename, "w")
-new_file.write("#!/usr/bin/env python3\n\n\n")
+from sys import exit
+if len(argv) == 1:
+    print("Error. Supply the name of the file to be created.")
+    exit()
 
-# make it executable
-import os
-import stat
-st = os.stat(filename)
-os.chmod(filename, st.st_mode | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)
+filename = argv[1]
+if not filename.endswith(".py"):
+    filename += ".py"
+force = False
+if len(argv) > 2:
+    if argv[2] == "-f":
+        force = True
+warning = False
+try:
+    sf = open(filename,"r")
+    warning = True
+    sf.close()
+except:
+    pass
+proceed = True
+if warning and not force:
+    proceed = False
+    print("WARNING: File " + filename + " is not empty. Do you want to overwrite it? (y/N)")
+    yn = input()
+    if yn.lower() == "y":
+        proceed = True
+        print("File overwritten. This warning can be circumvented with the flag -f (force).")
+    else:
+        print("Not overwriting file. This warning can be circumvented with the flag -f (force).")
+if proceed:
+    new_file = open(filename, "w")
+    new_file.write("#!/usr/bin/env python3\n\n\n")
+
+    # make it executable
+    import os
+    import stat
+    st = os.stat(filename)
+    os.chmod(filename, st.st_mode | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)
