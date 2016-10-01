@@ -16,7 +16,7 @@ The above command is all that is necessary for setup.
 
 The commands can be used anywhere by referencing them by their names (after setup). In other words, use `cpcr` or `pycr` just as you would use `ls` or `cd`.
 
-Detailed documentation for all commands and their specific options, can be found in the `docs.md` file. However, there is a general structure:
+Detailed documentation for all commands and their respective options, can be found in the `docs.md` file. However, there is a general structure:
 
     langcr filename
 
