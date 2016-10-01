@@ -6,7 +6,7 @@
 
 ## pycr
 
-Language: *Python 3*
+Language: **Python 3**
 
 #### Usage
 
@@ -18,7 +18,7 @@ Creates a very simple Python 3 file, and makes it executable.
 
 ## cpcr
 
-Language: *C++*
+Language: **C++**
 
 #### Usage
 
