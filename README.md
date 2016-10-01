@@ -10,7 +10,7 @@ To be able to use the commands everywhere, we need to symlink them into the `/us
 
     ln -s ~/path/to/templatescripts/bin/* /usr/local/bin
 
-The above command is all that is necessary for setup.
+Whenever new languages are added, run the above command again, to make their scripts universally available. There is no need in calling it, though, upon an edit in an existing file (thanks to symlinks).
 
 # Usage
 
