@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+
+# create a new file, with the name as given as the first argument
+from sys import argv
+filename = argv[1]+".py"
+new_file = open(filename, "w")
+new_file.write("#!/usr/bin/env python3\n\n\n")
+
+# make it executable
+import os
+import stat
+st = os.stat(filename)
+os.chmod(filename, st.st_mode | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)

@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+
+# create a new file, with the name as given as the first argument
+from sys import argv
+from sys import exit
+if len(argv) == 1:
+    print("Error. Supply the name of the file to be created.")
+    exit()
+
+filename = argv[1]
+if not filename.endswith(".cpp"):
+    filename += ".cpp"
+force = False
+if len(argv) > 2:
+    if argv[2] == "-f":
+        force = True
+warning = False
+try:
+    sf = open(filename,"r")
+    warning = True
+    sf.close()
+except:
+    pass
+proceed = True
+if warning and not force:
+    proceed = False
+    print("WARNING: File " + filename + " is not empty. Do you want to overwrite it? (y/N)")
+    yn = input()
+    if yn.lower() == "y":
+        proceed = True
+        print("File overwritten. This warning can be circumvented with the flag -f (force).")
+    else:
+        print("Not overwriting file. This warning can be circumvented with the flag -f (force).")
+if proceed:
+    new_file = open(filename, "w")
+    new_file.write("#include <bits/stdc++.h>\nusing namespace std;\nchar enl = '\\n';\ntypedef long long ll;\ntypedef unsigned long long ull;\ntypedef vector<int> vi;\ntypedef pair<int,int> ii;\ntypedef vector<pair<int, int>> vii;\n\nint main()\n{\n    ios::sync_with_stdio(false);\n    cin.tie(0);\n\n\n\n    return 0;\n}")
