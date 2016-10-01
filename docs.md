@@ -1,12 +1,12 @@
 # List of all commands
 
-- pycr
-- cpcr
-- txcr
+- pycr – Python 3
+- cpcr – C++
+- txcr – LaTeX
 
 ## pycr
 
-Language: **Python 3**
+**Language: Python 3**
 
 #### Usage
 
@@ -18,11 +18,11 @@ Creates a very simple Python 3 file, and makes it executable.
 
 ## cpcr
 
-Language: **C++**
+**Language: C++**
 
 #### Usage
 
-    cpcr filename [options]
+    cpcr [options] filename
 
 #### Options
 
@@ -36,9 +36,11 @@ Appends the extension `.cpp` if not already present in the filename.
 
 ## txcr
 
+**Language: LaTeX**
+
 #### Usage
     
-    txcr filename [options]
+    txcr [options] filename 
 
 #### Options
 
