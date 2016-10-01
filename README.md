@@ -2,7 +2,7 @@
 
 A collection of scripts for creating simple template files, in various languages. Calling one of the scripts will create a template file in the specified language, with a file name of your choice.
 
-A list of all the scripts, and thus all the supported languages, can be found in the `docs.md` file. All scripts are located in the bin folder.
+A list of all the scripts, and thus all the supported languages, can be found in the `docs.md` file. All scripts are located in the `bin` folder.
 
 # Setup
 
