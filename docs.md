@@ -10,11 +10,17 @@
 
 #### Usage
 
-    pycr filename
+    pycr [options] filename
+
+#### Options
+
+- `-f`: Force creation of the file. If there already exists a file with the same name, overwrite it.
 
 #### Description
 
 Creates a very simple Python 3 file, and makes it executable.
+
+Appends the extension `.py` if not already present in the filename.
 
 ## cpcr
 
