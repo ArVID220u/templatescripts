@@ -36,4 +36,4 @@ if warning and not force:
         print("Not overwriting file. This warning can be circumvented with the flag -f (force).")
 if proceed:
     new_file = open(filename, "w")
-    new_file.write("import javax.swing.*;\nimport java.util.*;\n\npublic class " + name + " {\n\n    public static void main(String[] args) {\n\n\n\n    }\n}")
+    new_file.write("import javax.swing.*;\nimport java.util.*;\n\npublic class " + name + " {\n\n    public static void main(String[] args) {\n\n        Scanner input = new Scanner(System.in);\n\n\n\n    }\n}")
