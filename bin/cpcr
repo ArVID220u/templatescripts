@@ -33,4 +33,4 @@ if warning and not force:
         print("Not overwriting file. This warning can be circumvented with the flag -f (force).")
 if proceed:
     new_file = open(filename, "w")
-    new_file.write("#include <bits/stdc++.h>\nusing namespace std;\ntypedef long long ll;\ntypedef long double ld;\ntypedef vector<ll> vi;\ntypedef pair<ll,ll> ii;\ntypedef vector<ii> vii;\n#define all(v) v.begin(), v.end()\n#define rep(i, from, to) for (int i = from; i < (to); ++i)\n\nint main()\n{\n    ios::sync_with_stdio(false);\n    cin.tie(0);\n    cin.exceptions(cin.failbit);\n\n\n\n    return 0;\n}")
+    new_file.write("#include <bits/stdc++.h>\nusing namespace std;\ntypedef long long ll;\ntypedef long double ld;\ntypedef vector<ll> vi;\ntypedef pair<ll,ll> ii;\ntypedef vector<ii> vii;\n#define all(v) v.begin(), v.end()\n#define rep(i, from, to) for (ll i = from; i < ll(to); ++i)\n\nint main()\n{\n    ios::sync_with_stdio(false);\n    cin.tie(0);\n    cin.exceptions(cin.failbit);\n\n\n\n    return 0;\n}")
